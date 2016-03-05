@@ -17,6 +17,7 @@ from okcoincom import Okcoincom
 from okcoincn import Okcoincn
 from coincheck import Coincheck
 from bitstamp import Bitstamp
+from poloniex import Poloniex
 
 sort_rank = dict((v, k) for k, v in enumerate(['usd', 'eur', 'cny', 'jpy', 'btc', 'ltc', 'doge']))
 
@@ -32,8 +33,8 @@ def sort_markets(markets):
 
 def main():
     crawlers = [
-        Hitbtc(), Btce(), Itbit(), Btcchina(), Cexio(), Bter(), Cryptsy(), Kraken(), Bitfinex(),
-        Okcoincom(), Okcoincn(), Coincheck(), Bitstamp()
+        Hitbtc(), Btce(), Itbit(), Btcchina(), Cexio(), Bter(),Kraken(), Bitfinex(),
+        Okcoincom(), Okcoincn(), Coincheck(), Bitstamp(), Poloniex()
         # Mintpal()
     ]
 
