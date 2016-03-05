@@ -19,7 +19,7 @@ class Bter(interface.MarketExplorer):
         for obj in js['data']:
             market_str = obj['pair']
             # bter logic: vol_a = float, vol_b = str
-            vol = obj['vol_a'] + float(obj['vol_b'].replace(',', '.'))
+            vol = obj['vol_a'] + float(obj['vol_b'].replace(',', ''))
             # only add the market if it has nonzero volume. I don't know exactly what
             # vol_a and vol_b are, but it seems to work.
             if vol:
